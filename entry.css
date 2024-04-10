@@ -1,0 +1,103 @@
+body{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    background:rgb(0, 0, 0);
+    margin:0;
+color:rgb(255, 255, 255);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+#style {
+    --c:  #1a1a1a; /* the color*/
+    
+    box-shadow: 0 0 0 .1em inset var(--c); 
+    --_g: linear-gradient(var(--c) 0 0) no-repeat;
+    background: 
+      var(--_g) calc(var(--_p,0%) - 100%) 0%,
+      var(--_g) calc(200% - var(--_p,0%)) 0%,
+      var(--_g) calc(var(--_p,0%) - 100%) 100%,
+      var(--_g) calc(200% - var(--_p,0%)) 100%;
+    background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+    outline-offset: .1em;
+    transition: background-size .4s, background-position 0s .4s;
+  }
+ #style:hover {
+    --_p: 100%;
+    transition: background-position .4s, background-size 0s;
+  }
+  #style:active {
+    box-shadow: 0 0 9e9q inset #0009; 
+    background-color: var(--c);
+    color: #fff;
+  }
+  
+  
+  
+  #style {
+    font-family: system-ui, sans-serif;
+    font-size: 6dvh;
+    cursor: pointer;
+    padding: .1em .6em;
+    font-weight: bold;  
+    color:white;
+    border: none;
+  }
+#btn{
+    background:none;
+    height:72px;
+    width:72px;
+    display:flex;
+    text-align:center;
+    justify-content:center;
+    align-items:center;
+    border:none;
+    
+}
+.black{
+    color:rgb(0, 0, 0);
+    background:rgb(255, 255, 255);
+}
+mainText{
+font-size:10dvh;
+background: -webkit-linear-gradient(0deg, #ff0000, rgb(0, 0, 0));
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+buttons{
+    height:5vh;
+    width:100%;
+}
+.main{
+    background:none;
+    height:50dvh;
+    width:100dvw;
+    border-radius:50px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:1vh;
+    flex-direction:column;
+    font-size: 4dvh;
+    font-family:"Oswald", sans-serif;
+}
+#main1{
+    background:linear-gradient(rgb(0, 0, 0), rgb(20, 20, 20));
+    
+    height:50dvh;
+    width:90dvw;
+    border-radius:50px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    gap:6vh;
+    flex-direction:column;
+    font-size: 4dvh;
+    font-family: "Merriweather", serif;
+    font-weight:700;
+    padding:2vw;
+}

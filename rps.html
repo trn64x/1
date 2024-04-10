@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            flex-direction: column;
+            margin: 0;
+            gap: 100px;
+            font-size: 50px;
+        }
+        .container1 {
+            display: flex;
+            flex-direction: row;
+            gap: 200px;
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <img src="user-alt-1-svgrepo-com.svg">VS<img src="robot-svgrepo-com.svg">
+    </div>
+    <div id="result1"></div>
+    <div id="result">0:0</div>
+    <div class="container">
+        <button id="r"><img src="rock-svgrepo-com.svg"></button>
+        <button id="p"><img src="paper-svgrepo-com.svg"></button>
+        <button id="s"><img src="scissors-svgrepo-com.svg"></button>
+    </div>
+    <script>
+        let userScore = 0;
+        let computerScore = 0;
+        const resultDisplay = document.getElementById("result");
+        const resultDisplay1 = document.getElementById("result1");
+
+        function updateScore() {
+            resultDisplay.textContent = userScore + ":" + computerScore;
+        }
+
+        function playGame(userChoice) {
+            const choices = ["papier", "kamień", "nożyce"];
+            const computerChoice = choices[Math.floor(Math.random() * 3)];
+            const outcomes = {
+                "papierkamień": "zdobywasz punkt",
+                "kamieńnożyce": "zdobywasz punkt",
+                "nożycepapier": "zdobywasz punkt",
+                "kamieńpapier": "przeciwnik zdobywa punkt",
+                "nożycekamień": "przeciwnik zdobywa punkt",
+                "papiernożyce": "przeciwnik zdobywa punkt",
+                "papierpapier": "remis",
+                "kamieńkamień": "remis",
+                "nożycenożyce": "remis"
+            };
+            const outcomeKey = userChoice + computerChoice;
+            const outcome = outcomes[outcomeKey];
+            if (outcome === "zdobywasz punkt") {
+                resultDisplay1.textContent = "Zdobywasz punkt!";
+                userScore++;
+            } else if (outcome === "przeciwnik zdobywa punkt") {
+                resultDisplay1.textContent = "przeciwnik zdobywa punkt.";
+                computerScore++;
+            }
+            else{
+                resultDisplay1.textContent = "remis";
+            }
+            updateScore();
+        }
+
+        document.getElementById("r").addEventListener("click", () => playGame("kamień"));
+        document.getElementById("p").addEventListener("click", () => playGame("papier"));
+        document.getElementById("s").addEventListener("click", () => playGame("nożyce"));
+    </script>
+</body>
+</html>

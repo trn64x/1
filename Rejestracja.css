@@ -1,0 +1,116 @@
+body{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    gap:7vh;
+    justify-content:center;
+    flex-direction:row;
+    background:rgb(236, 236, 236);
+    margin:0;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+.battery{
+height:100vh;
+width:45dvw;
+border-right:1px solid black;
+background:rgba(20,20,20,0.1);
+color:white;
+font-size:40px;
+font-family:arial;
+display:flex;
+align-items:center;
+flex-direction: column;
+gap:50px;
+justify-content:center;
+font-family: "Josefin Sans", sans-serif;
+}
+a{
+    font-size:15px;
+    text-decoration:none;
+    text-decoration-line: none;
+}
+#stream{
+    
+    font-size:5vh;
+    font-family:arial;
+    width:30vw;
+    height:8vh;
+}
+container{
+    display:flex;
+    align-items: flex-start;
+    position:absolute;
+    top:0%;
+    left:0%;
+    height:5vh;
+    
+    width:100%;
+}
+red{
+background: -webkit-linear-gradient(0deg, #ff0000, rgb(255, 255, 255));
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+#baner{
+    display:flex;
+    text-align:center;
+    gap:1%;
+    align-items:center;
+    background:rgb(43, 43, 43);
+    min-height:6dvh;
+    max-height:10dvh;
+    font-size:4vh;
+    color:white;
+    font-family: "Oswald", sans-serif;
+    width:100%;
+}
+.float{
+    float:left;
+}
+.main{
+    background:rgb(255, 255, 255);
+    box-shadow: 1px 2px 1px 1px rgb(141, 141, 141);
+    height:50dvh;
+    width:50dvw;
+    border-radius:50px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:1vh;
+    flex-direction:column;
+    font-size: 4dvh;
+    font-family:"Oswald", sans-serif;
+}
+input[type = submit]{
+    width:30%;
+    border-radius:5px;
+    border:1px solid black;
+    text-align:center;
+    font-size:2dvh;
+}
+input{
+    background:none;
+    height:4dvh;
+    width:75%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid grey;
+    border-radius:20px;
+
+    text-align:center;
+    color:black;
+
+}
+input:hover{
+    background:rgb(236, 236, 236);
+    border:1px solid black;
+}
+input:hover[type=submit]{
+background:rgb(37, 37, 37);
+color:white;
+font-size:2dvh;
+}
